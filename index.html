@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- Menu Toggle Button -->
+    <button class="menu-toggle">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <a href="#">
+                    <img src="assets/img/logo.svg" alt="HRHR">
+                    <span>HRHR</span>
+                </a>
+            </div>
+            <ul class="sidebar-menu">
+                <li class="menu-item"><a href="#"><span><img src="assets/img/Dashboard.svg" alt="Dashboard"></span> Dashboard</a></li>
+                <li class="menu-item"><a href="#"><span><img src="assets/img/Calendar.svg" alt="Calendar"></span> Calendar</a></li>
+                <li class="menu-item"><a href="#"><span><img src="assets/img/Recruitment.svg" alt="Recruitment"></span> Recruitment<span class="menu-badge">10</span></a></li>
+                <li class="menu-item"><a href="#"><span><img src="assets/img/Employees.svg" alt="Employees"></span> Employees</a></li>
+                <li class="menu-item active"><a href="#"><span><img src="assets/img/Leave.svg" alt="Leave"></span> Leave</a></li>
+                <li class="menu-item"><a href="#"><span><img src="assets/img/Organisation.svg" alt="Organisation"></span> Organisation</a></li>
+                <li class="menu-item"><a href="#"><span><img src="assets/img/Billings.svg" alt="Billings"></span> Billings</a></li>
+                <li class="menu-item"><a href="#"><span><img src="assets/img/Engagement.svg" alt="Engagement"></span> Engagement</a></li>
+                <li class="menu-item"><a href="#"><span><img src="assets/img/Development.svg" alt="Development"></span> Development</a></li>
+                <li class="menu-item"><a href="#"><span><img src="assets/img/Performance.svg" alt="Performance"></span> Performance</a></li>
+                <li class="menu-item"><a href="#"><span><img src="assets/img/Reports.svg" alt="Reports"></span> Reports</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Top Menu/Header -->
+            <header class="top-menu">
+                <div class="hr-logo-section">
+                    <img src="assets/img/Union.svg" alt="MenuMiz HR Logo" class="hr-logo">
+                    <span class="app-name">Menumiz HR</span>
+                </div>
+                <div class="action-section">
+                    <div class="search-section">
+                        <input type="text" class="search-input" placeholder="Enter any keyword...">
+                        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    </div>
+                    <i class="fas fa-sliders-h settings-icon"></i>
+                    <i class="fa-regular fa-bell notification-icon">
+                        <span class="notification-badge"></span>
+                    </i>
+                    <img src="assets/img/user.svg" alt="User Avatar" class="user-avatar">
+                </div>
+            </header>
+
+            <!-- Dashboard Main Section -->
+            <section class="dashboard-section">
+                <!-- Dashboard Header with Navigation Tabs -->
+                <header class="dashboard-header">
+                    <nav class="tab-menu">
+                        <ul class="tab-list">
+                            <li class="tab-item active"><a href="#">Leave Management</a></li>
+                            <li class="tab-item"><a href="#">Leave Requests</a></li>
+                            <li class="tab-item"><a href="#">Leave Types</a></li>
+                            <li class="tab-item"><a href="#">Leave Calendar</a></li>
+                            <li class="tab-item"><a href="#">Leave Report</a></li>
+                            <li class="tab-item"><a href="#">Leave Approver</a></li>
+                            <li class="tab-item"><a href="#"><i class="fas fa-sliders-h"></i></a></li>
+                        </ul>
+                    </nav>
+                    <h1>Dashboard</h1>
+                </header>
+
+                <!-- Dashboard Cards Section -->
+                <div class="dashboard-cards">
+                    <!-- Heatmap Card -->
+                    <div class="heatmap-container">
+                        <div class="header">
+                            <h3>Heatmap</h3>
+                            <div class="dropdowns">
+                                <select class="select2 sumoselect" name="leave-type" id="leave-type">
+                                    <option value="sickday">SICKDAY</option>
+                                    <option value="annual">ANNUAL</option>
+                                    <option value="emergency">EMERGENCY</option>
+                                </select>
+                                <select class="sumoselect select2" name="month" id="month">
+                                    <option value="march2023">MARCH 2023</option>
+                                    <option value="april2023">APRIL 2023</option>
+                                    <option value="may2023">MAY 2023</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="statistics-section">
+                            <div class="day-selector">
+                                <div class="day">Mon</div>
+                                <div class="day">Tue</div>
+                                <div class="day">Wed</div>
+                                <div class="day">Thu</div>
+                                <div class="day selected">Fri</div>
+                                <div class="day">Sat</div>
+                                <div class="day">Sun</div>
+                            </div>
+                            <div class="statistics">
+                                <div class="stat">
+                                    <p>Sick Leave</p>
+                                    <div class="piechart animate" style="--p:50;--c:#6E56E0">50%</div>
+                                </div>
+                                <div class="stat">
+                                    <p>Annual Leave</p>
+                                    <div class="piechart animate" style="--p:30;--c:#6E56E0">30%</div>
+                                </div>
+                                <div class="stat">
+                                    <p>Emergency Leave</p>
+                                    <div class="piechart animate" style="--p:20;--c:#6E56E0">20%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer">
+                            <p>Most popular day: Friday</p>
+                        </div>
+                    </div>
+
+                    <!-- Most Days Away Card -->
+                    <div class="most-days-away">
+                        <div class="header">
+                            <h3>Most Days Away</h3>
+                            <div class="dropdowns">
+                                <select class="select2 sumoselect" name="month-right" id="month-right">
+                                    <option value="march2023">MARCH 2023</option>
+                                    <option value="april2023">APRIL 2023</option>
+                                    <option value="may2023">MAY 2023</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="person-list">
+                            <div class="person">
+                                <img src="assets/img/Mark.svg" alt="Mark Jacobs" class="avatar" />
+                                <span class="name">Mark Jacobs</span>
+                                <span class="days">5.0 day(s)</span>
+                            </div>
+                            <div class="person">
+                                <img src="assets/img/Charlie.svg" alt="Charlie Kristen" class="avatar" />
+                                <span class="name">Charlie Kristen</span>
+                                <span class="days">3.5 day(s)</span>
+                            </div>
+                            <div class="person">
+                                <img src="assets/img/Nur.svg" alt="Nur Fariha binti Maslan" class="avatar" />
+                                <span class="name">Nur Fariha binti Maslan</span>
+                                <span class="days">1.0 day(s)</span>
+                            </div>
+                            <div class="person">
+                                <img src="assets/img/Nishant.svg" alt="Nishant Talwar" class="avatar" />
+                                <span class="name">Nishant Talwar</span>
+                                <span class="days">1.0 day(s)</span>
+                            </div>
+                        </div>
+                        <div class="footer">
+                            <p>TOTAL: 9.5 day(s)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Leave Management Section -->
+                <div class="leave-management">
+                    <!-- Leave Requests Header -->
+                    <header class="leave-header">
+                        <h1>Leave Requests</h1>
+                        <div class="view-toggle">
+                            <button class="active">List View</button>
+                            <button>Month View</button>
+                        </div>
+                    </header>
+
+                    <!-- Leave Requests Table -->
+                    <div class="leave-request-table">
+                        <div class="table-header">
+                            <div class="tabs">
+                                <button class="tab active" data-filter="all">All</button>
+                                <button class="tab" data-filter="approved">Approved</button>
+                                <button class="tab" data-filter="rejected">Rejected</button>
+                            </div>
+                            <div class="calendar">
+                                <button class="nav prev"><i class="fa-solid fa-caret-left"></i></button>
+                                <span class="month-year-display">March <span>2023</span></span>
+                                <button class="calendar-icon">
+                                    <i class="fa-solid fa-calendar-days"></i>
+                                    <span><i class="fa-solid fa-sort-down"></i></span>
+                                </button>
+                                <button class="nav next"><i class="fa-solid fa-caret-right"></i></button>
+                            </div>
+                        </div>
+                        <table id="leaveTable" class="display leave-table">
+                            <thead>
+                                <tr>
+                                    <th><input type="checkbox" /> #</th>
+                                    <th>NAME</th>
+                                    <th>PERIOD</th>
+                                    <th>DAY(S)</th>
+                                    <th>LEAVE TYPE</th>
+                                    <th>ACTIONS</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody class="custom-table">
+                                <!-- Leave Request Row -->
+                                <tr data-status="all">
+                                    <td><input type="checkbox" />
+                                        <span class="status-indicator"></span>
+                                    </td>
+                                    <td>
+                                        <div class="middle-flex">
+                                            <img src="assets/img/Mark.svg" alt="Profile" class="profile-pic">
+                                            <span>Mark Jacobs</span>
+                                        </div>
+                                    </td>
+                                    <td>31 Mar, 2023 09:00 AM - 31 Mar, 2023 18:00 PM</td>
+                                    <td>1.0</td>
+                                    <td>Annual Leave</td>
+                                    <td class="actions">
+                                        <button class="reject">REJECT</button>
+                                        <button class="approve">APPROVE</button>
+                                    </td>
+                                    <td class="details-arrow">
+                                        <button class="details"><i class="fa-solid fa-chevron-right"></i></button>
+                                    </td>
+                                </tr>
+                                <!-- Leave Request Row -->
+                                <tr data-filter="rejected">
+                                    <td><input type="checkbox" />
+                                        <span class="status-indicator"></span>
+                                    </td>
+                                    <td>
+                                        <div class="middle-flex">
+                                            <img src="assets/img/Charlie.svg" alt="Profile" class="profile-pic">
+                                            <span>Charlie Kristen</span>
+                                        </div>
+                                    </td>
+                                    <td>10 Apr, 2023 09:00 AM - 11 Apr, 2023 18:00 PM</td>
+                                    <td>2.0</td>
+                                    <td>Annual Leave</td>
+                                    <td class="actions">
+                                        <button class="reject">REJECT</button>
+                                        <button class="approve">APPROVE</button>
+                                    </td>
+                                    <td class="details-arrow">
+                                        <button class="details"><i class="fa-solid fa-chevron-right"></i></button>
+                                    </td>
+                                </tr>
+                                <!-- Leave Request Row -->
+                                <tr data-filter="approved">
+                                    <td><input type="checkbox" />
+                                        <span class="status-indicator"></span>
+                                    </td>
+                                    <td>
+                                        <div class="middle-flex">
+                                            <img src="assets/img/Nishant.svg" alt="Profile" class="profile-pic">
+                                            <span>Nishant</span>
+                                        </div>
+                                    </td>
+                                    <td>10 Apr, 2023 09:00 AM - 11 Apr, 2023 18:00 PM</td>
+                                    <td>2.0</td>
+                                    <td>Annual Leave</td>
+                                    <td class="actions">
+                                        <button class="reject">REJECT</button>
+                                        <button class="approve">APPROVE</button>
+                                    </td>
+                                    <td class="details-arrow">
+                                        <button class="details"><i class="fa-solid fa-chevron-right"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/scripts.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+</body>
+
+</html>
